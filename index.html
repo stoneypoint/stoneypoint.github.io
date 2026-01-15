@@ -1,48 +1,84 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light" />
+    <title>StoneyPoint</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <title>128 Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>OneTwoEight Apps</h1>
-    </header>
-    <main id="main">
-      <section class="portfolio" id="portfolio">
-        <h2 class="section-title">Our Apps</h2>
-        <div class="app-grid">
-          <a href="https://apps.apple.com/us/app/blocus/id6739318051" class="app-card" id="app1">
-            <img src="app-icon-blocus.png" alt="Blocus 앱 아이콘" class="app-image" />
-            <div class="app-details">
-              <h3>Blocus</h3>
-              <p>할 일을 블록(block)으로 관리하고 한 가지 할 일에 집중해보세요.</p>
-            </div>
-          </a>
-          <div class="app-card coming-soon">
-            <div class="placeholder-circle">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <div class="app-details">
-              <h3>Coming Soon</h3>
-              <p>새로운 앱을 준비하고 있어요.<br />조금만 기다려주세요!</p>
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="logo">
+          <img src="logo.png" alt="StoneyPoint Logo" />
+        </div>
+        <h1 class="brand">StoneyPoint</h1>
+        <p class="subtitle">Creating experiences worth your time</p>
+      </section>
+
+      <!-- Apps Grid -->
+      <section class="apps">
+        <!-- Labeled App -->
+        <article class="app-item">
+          <div class="app-icon">
+            <img src="./labeled/app-icon.png" alt="Labeled" />
+          </div>
+          <div class="app-info">
+            <h2>Labeled</h2>
+            <p>Label your day. Make sense of your life.</p>
+            <div class="badges">
+              <a
+                href="https://apps.apple.com/app/id6757566024"
+                target="_blank"
+                class="badge-img"
+              >
+                <img
+                  src="download-on-the-app-store.svg"
+                  alt="Download on the App Store"
+                />
+              </a>
+              <span class="badge-img disabled">
+                <img
+                  src="get-it-on-google-play.svg"
+                  alt="Get it on Google Play"
+                />
+              </span>
             </div>
           </div>
-        </div>
+        </article>
+
+        <!-- More Coming Soon -->
+        <article class="app-item upcoming">
+          <div class="app-icon placeholder">
+            <span>?</span>
+          </div>
+          <div class="app-info">
+            <h2>More Apps</h2>
+            <p>We're cooking up something new. Stay tuned.</p>
+          </div>
+        </article>
       </section>
-    </main>
-    <footer>
-      <p>Copyright © <span id="currentYear"></span> OneTwoEight. All rights reserved.</p>
-      <p class="contact">Contact: <a href="mailto:contact@onetwoeight.site">contact@onetwoeight.site</a></p>
-    </footer>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p>© <span id="year"></span> StoneyPoint</p>
+          <a href="mailto:contact@stoney-point.com" class="email"
+            >contact@stoney-point.com</a
+          >
+        </div>
+      </footer>
+    </div>
+
     <script>
-      document.getElementById("currentYear").textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
