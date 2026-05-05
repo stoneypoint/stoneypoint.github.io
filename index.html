@@ -6,7 +6,7 @@
     <title>StoneyPoint</title>
     <meta
       name="description"
-      content="StoneyPoint builds calm iOS apps for organizing tasks, shaping ideas, and noticing small wins."
+      content="StoneyPoint makes simple apps for everyday life."
     />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
@@ -24,15 +24,27 @@
   <body>
     <main class="site-shell">
       <section class="profile" aria-labelledby="site-title">
-        <img class="profile-image" src="logo.png" alt="StoneyPoint logo" />
+        <img
+          class="profile-image"
+          src="logo.png"
+          alt="StoneyPoint logo"
+          data-i18n-attr="alt:logoAlt"
+        />
         <h1 id="site-title">StoneyPoint</h1>
-        <p class="profile-role">Calm iOS tools from a small studio</p>
-        <p class="profile-copy">
-          We make lightweight apps that help ideas settle into useful shape.
+        <p class="profile-copy" data-i18n="profileCopy">
+          We make simple apps for everyday life.
         </p>
 
-        <nav class="text-links" aria-label="Contact links">
-          <a href="mailto:contact@stoney-point.com" aria-label="Email">
+        <nav
+          class="text-links"
+          aria-label="Contact links"
+          data-i18n-attr="aria-label:contactLinksLabel"
+        >
+          <a
+            href="mailto:contact@stoney-point.com"
+            aria-label="Email"
+            data-i18n-attr="aria-label:emailLabel"
+          >
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
           </a>
           <a
@@ -40,6 +52,7 @@
             target="_blank"
             rel="noreferrer"
             aria-label="App Store profile"
+            data-i18n-attr="aria-label:appStoreProfileLabel"
           >
             <i class="fa-brands fa-app-store-ios" aria-hidden="true"></i>
           </a>
@@ -54,7 +67,12 @@
         </nav>
       </section>
 
-      <section id="apps" class="app-list" aria-label="StoneyPoint apps">
+      <section
+        id="apps"
+        class="app-list"
+        aria-label="StoneyPoint apps"
+        data-i18n-attr="aria-label:appsLabel"
+      >
         <a
           class="app-link app-link--labeled"
           href="https://apps.apple.com/app/labeled-organize-with-labels/id6758290807"
@@ -65,10 +83,12 @@
             <img src="./labeled/app-icon.png" alt="" class="app-icon" />
             <span class="app-copy">
               <span class="app-title">Labeled</span>
-              <span class="app-subtitle">Organize tasks, not just list</span>
+              <span class="app-subtitle" data-i18n="labeledSubtitle">
+                A to-do app built around labels.
+              </span>
             </span>
           </span>
-          <span class="app-cta">
+          <span class="app-cta" data-i18n="appStoreCta">
             View on App Store
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </span>
@@ -84,10 +104,12 @@
             <img src="./blocus/app-icon.png" alt="" class="app-icon" />
             <span class="app-copy">
               <span class="app-title">Blocus</span>
-              <span class="app-subtitle">Goals, Notes &amp; Ideas by Block</span>
+              <span class="app-subtitle" data-i18n="blocusSubtitle">
+                Organize goals, ideas, and tasks into blocks.
+              </span>
             </span>
           </span>
-          <span class="app-cta">
+          <span class="app-cta" data-i18n="appStoreCta">
             View on App Store
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </span>
@@ -103,10 +125,12 @@
             <img src="./achievo/app-icon.png" alt="" class="app-icon" />
             <span class="app-copy">
               <span class="app-title">Achievo</span>
-              <span class="app-subtitle">Small wins, Tiny achievements</span>
+              <span class="app-subtitle" data-i18n="achievoSubtitle">
+                A journal for your small wins.
+              </span>
             </span>
           </span>
-          <span class="app-cta">
+          <span class="app-cta" data-i18n="appStoreCta">
             View on App Store
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </span>
@@ -114,11 +138,153 @@
       </section>
 
       <footer class="footer">
-        <p>© <span id="year"></span> StoneyPoint</p>
+        <p class="footer-copy">© <span id="year"></span> StoneyPoint</p>
+        <div
+          class="language-switcher"
+          aria-label="Language"
+          data-i18n-attr="aria-label:languageSwitcherLabel"
+          data-language-switcher
+        >
+          <button
+            class="language-option"
+            type="button"
+            data-locale-option="ko"
+            aria-pressed="false"
+          >
+            한국어
+          </button>
+          <span class="language-divider" aria-hidden="true">|</span>
+          <button
+            class="language-option"
+            type="button"
+            data-locale-option="en"
+            aria-pressed="false"
+          >
+            English
+          </button>
+        </div>
       </footer>
     </main>
 
     <script>
+      const localeStorageKey = "stoneyPointLocale";
+      const availableLocales = ["en", "ko"];
+      const copy = {
+        en: {
+          metaDescription: "StoneyPoint makes simple apps for everyday life.",
+          logoAlt: "StoneyPoint logo",
+          contactLinksLabel: "Contact links",
+          emailLabel: "Email",
+          appStoreProfileLabel: "App Store profile",
+          appsLabel: "StoneyPoint apps",
+          languageSwitcherLabel: "Language",
+          profileCopy: "We make simple apps for everyday life.",
+          labeledSubtitle: "A to-do app built around labels.",
+          blocusSubtitle: "Organize goals, ideas, and tasks into blocks.",
+          achievoSubtitle: "A journal for your small wins.",
+          appStoreCta: "View on App Store",
+        },
+        ko: {
+          metaDescription:
+            "StoneyPoint는 일상에 도움이 되는 간단한 앱을 만듭니다.",
+          logoAlt: "StoneyPoint 로고",
+          contactLinksLabel: "연락처 링크",
+          emailLabel: "이메일",
+          appStoreProfileLabel: "App Store 프로필",
+          appsLabel: "StoneyPoint 앱",
+          languageSwitcherLabel: "언어",
+          profileCopy: "일상에 도움이 되는 간단한 앱을 만듭니다.",
+          labeledSubtitle: "라벨을 중심으로 정리하는 할 일 관리 앱",
+          blocusSubtitle: "목표, 아이디어, 할 일을 블록으로 정리하는 앱",
+          achievoSubtitle: "작은 성공을 기록하는 저널",
+          appStoreCta: "App Store에서 보기",
+        },
+      };
+
+      const getStoredLocale = () => {
+        try {
+          const storedLocale = localStorage.getItem(localeStorageKey);
+          return availableLocales.includes(storedLocale) ? storedLocale : null;
+        } catch {
+          return null;
+        }
+      };
+
+      const getBrowserLocale = () => {
+        const browserLanguages =
+          navigator.languages && navigator.languages.length
+            ? navigator.languages
+            : [navigator.language];
+        const preferredLanguage = (browserLanguages[0] || "").toLowerCase();
+
+        return preferredLanguage.startsWith("ko") ? "ko" : "en";
+      };
+
+      const setStoredLocale = (locale) => {
+        try {
+          localStorage.setItem(localeStorageKey, locale);
+        } catch {
+          return;
+        }
+      };
+
+      const applyLocale = (locale) => {
+        const localizedCopy = copy[locale];
+        const metaDescription = document.querySelector(
+          'meta[name="description"]',
+        );
+
+        document.documentElement.lang = locale;
+
+        if (metaDescription) {
+          metaDescription.setAttribute(
+            "content",
+            localizedCopy.metaDescription,
+          );
+        }
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.dataset.i18n;
+          const textNode = Array.from(element.childNodes).find(
+            (node) => node.nodeType === Node.TEXT_NODE,
+          );
+
+          if (textNode && localizedCopy[key]) {
+            textNode.textContent = localizedCopy[key];
+          }
+        });
+
+        document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
+          element.dataset.i18nAttr.split(",").forEach((pair) => {
+            const [attribute, key] = pair.split(":");
+
+            if (attribute && localizedCopy[key]) {
+              element.setAttribute(attribute, localizedCopy[key]);
+            }
+          });
+        });
+
+        document.querySelectorAll("[data-locale-option]").forEach((button) => {
+          const isActive = button.dataset.localeOption === locale;
+          button.setAttribute("aria-pressed", String(isActive));
+        });
+      };
+
+      document.querySelectorAll("[data-locale-option]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const locale = button.dataset.localeOption;
+
+          if (!availableLocales.includes(locale)) {
+            return;
+          }
+
+          setStoredLocale(locale);
+          applyLocale(locale);
+        });
+      });
+
+      applyLocale(getStoredLocale() || getBrowserLocale());
+
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
