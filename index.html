@@ -4,119 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StoneyPoint</title>
+    <meta
+      name="description"
+      content="StoneyPoint builds calm iOS apps for organizing tasks, shaping ideas, and noticing small wins."
+    />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
   <body>
-    <div class="container">
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="logo">
-          <img src="logo.png" alt="StoneyPoint Logo" />
-        </div>
-        <h1 class="brand">StoneyPoint</h1>
-        <p class="subtitle">Creating experiences worth your time</p>
-      </section>
+    <main class="site-shell">
+      <section class="profile" aria-labelledby="site-title">
+        <img class="profile-image" src="logo.png" alt="StoneyPoint logo" />
+        <h1 id="site-title">StoneyPoint</h1>
+        <p class="profile-role">Calm iOS tools from a small studio</p>
+        <p class="profile-copy">
+          We make lightweight apps that help ideas settle into useful shape.
+        </p>
 
-      <!-- Apps Grid -->
-      <section class="apps">
-        <!-- Labeled App -->
-        <article class="app-item">
-          <div class="app-icon">
-            <img src="./labeled/app-icon.png" alt="Labeled" />
-          </div>
-          <div class="app-info">
-            <h2>Labeled</h2>
-            <p>Organize tasks, not just list</p>
-            <div class="badges">
-              <a
-                href="https://apps.apple.com/app/labeled-organize-with-labels/id6758290807"
-                target="_blank"
-                class="badge-img"
-              >
-                <img
-                  src="download-on-the-app-store.svg"
-                  alt="Download on the App Store"
-                />
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Blocus App -->
-        <article class="app-item">
-          <div class="app-icon">
-            <img src="./blocus/app-icon.png" alt="Blocus" />
-          </div>
-          <div class="app-info">
-            <h2>Blocus</h2>
-            <p>Goals, Notes &amp; Ideas by Block</p>
-            <div class="badges">
-              <a
-                href="https://apps.apple.com/app/blocus/id6759152876"
-                target="_blank"
-                class="badge-img"
-              >
-                <img
-                  src="download-on-the-app-store.svg"
-                  alt="Download on the App Store"
-                />
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Achievo App -->
-        <article class="app-item">
-          <div class="app-icon">
-            <img src="./achievo/app-icon.png" alt="Achievo" />
-          </div>
-          <div class="app-info">
-            <h2>Achievo</h2>
-            <p>Small wins, Tiny achievements</p>
-            <div class="badges">
-              <a
-                href="https://apps.apple.com/app/achievo-small-wins/id6761452248"
-                target="_blank"
-                class="badge-img"
-              >
-                <img
-                  src="download-on-the-app-store.svg"
-                  alt="Download on the App Store"
-                />
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- More Coming Soon -->
-        <article class="app-item upcoming">
-          <div class="app-icon placeholder">
-            <span>?</span>
-          </div>
-          <div class="app-info">
-            <h2>More Apps</h2>
-            <p>We're cooking up something new. Stay tuned.</p>
-          </div>
-        </article>
-      </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-content">
-          <p>© <span id="year"></span> StoneyPoint</p>
-          <a href="mailto:contact@stoney-point.com" class="email"
-            >contact@stoney-point.com</a
+        <nav class="text-links" aria-label="Contact links">
+          <a href="mailto:contact@stoney-point.com" aria-label="Email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://apps.apple.com/developer/stoneypoint/id1864793728"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="App Store profile"
           >
-        </div>
+            <i class="fa-brands fa-app-store-ios" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.threads.com/@stnyptlog"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Threads"
+          >
+            <i class="fa-brands fa-threads" aria-hidden="true"></i>
+          </a>
+        </nav>
+      </section>
+
+      <section id="apps" class="app-list" aria-label="StoneyPoint apps">
+        <a
+          class="app-link app-link--labeled"
+          href="https://apps.apple.com/app/labeled-organize-with-labels/id6758290807"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="app-intro">
+            <img src="./labeled/app-icon.png" alt="" class="app-icon" />
+            <span class="app-copy">
+              <span class="app-title">Labeled</span>
+              <span class="app-subtitle">Organize tasks, not just list</span>
+            </span>
+          </span>
+          <span class="app-cta">
+            View on App Store
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </a>
+
+        <a
+          class="app-link app-link--blocus"
+          href="https://apps.apple.com/app/blocus/id6759152876"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="app-intro">
+            <img src="./blocus/app-icon.png" alt="" class="app-icon" />
+            <span class="app-copy">
+              <span class="app-title">Blocus</span>
+              <span class="app-subtitle">Goals, Notes &amp; Ideas by Block</span>
+            </span>
+          </span>
+          <span class="app-cta">
+            View on App Store
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </a>
+
+        <a
+          class="app-link app-link--achievo"
+          href="https://apps.apple.com/app/achievo-small-wins/id6761452248"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="app-intro">
+            <img src="./achievo/app-icon.png" alt="" class="app-icon" />
+            <span class="app-copy">
+              <span class="app-title">Achievo</span>
+              <span class="app-subtitle">Small wins, Tiny achievements</span>
+            </span>
+          </span>
+          <span class="app-cta">
+            View on App Store
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </a>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> StoneyPoint</p>
       </footer>
-    </div>
+    </main>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
